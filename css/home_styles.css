@@ -1,0 +1,1033 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+body {
+  position: fixed;
+  width: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
+}
+h3,
+p {
+  font-family: "Ubuntu", sans-serif;
+}
+.main-wrap {
+  width: 100%;
+  display: flex;
+}
+.main-wrap .main-head {
+  width: 60px;
+  height: 100vh;
+  background: #f8ae9e;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+.main-wrap .main-head.active {
+  width: 25%;
+}
+.main-wrap .main-head .main-nav {
+  width: 100%;
+}
+.main-wrap .main-head .main-nav .navbar {
+  width: 100%;
+}
+.main-wrap .main-head .main-nav .navbar .navbar-nav {
+  width: 305px;
+  height: 590px;
+}
+.main-wrap .main-head .main-nav .navbar .navbar-nav .title {
+  padding: 15px 19px;
+  border-bottom: solid #f8ae9e;
+  width: 301px;
+}
+.main-wrap .main-head.active .main-nav .navbar .navbar-nav .title {
+  padding: 15px 13 px;
+  width: 301px;
+}
+.main-wrap .main-head .main-nav .navbar .navbar-nav .title h3 {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 35px;
+  color: #fff;
+  position: relative;
+}
+.main-wrap .main-head .main-nav .navbar .navbar-nav .title h3 .title-text {
+  position: absolute;
+  left: 35px;
+  opacity: 0;
+  transition: 0.2s ease;
+}
+.main-wrap
+  .main-head.active
+  .main-nav
+  .navbar
+  .navbar-nav
+  .title
+  h3
+  .title-text {
+  opacity: 1;
+}
+.main-wrap .main-head .main-nav .navbar .navbar-nav .nav-list {
+  margin: 0;
+  padding: 5px 10px;
+  width: 305px;
+  height: 458px;
+}
+
+.main-wrap .main-head .main-nav .navbar .navbar-nav .nav-list .nav-list-item {
+  padding: 10px 10px;
+  list-style: none;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  width: 281px;
+}
+
+.main-wrap
+  .main-head
+  .main-nav
+  .navbar
+  .navbar-nav
+  .nav-list
+  .nav-list-item:hover {
+  background: #C5705D;
+}
+.main-wrap
+  .main-head
+  .main-nav
+  .navbar
+  .navbar-nav
+  .nav-list
+  .nav-list-item
+  .nav-link {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #670202;
+  position: relative;
+}
+.main-wrap
+  .main-head
+  .main-nav
+  .navbar
+  .navbar-nav
+  .nav-list
+  .nav-list-item
+  .nav-link
+  i {
+  font-size: 20px;
+}
+.main-wrap
+  .main-head
+  .main-nav
+  .navbar
+  .navbar-nav
+  .nav-list
+  .nav-list-item
+  .nav-link
+  .link-text {
+  position: relative;
+  top: 3px;
+  left: 20px;
+  height: 29px;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+.main-wrap
+  .main-head.active
+  .main-nav
+  .navbar
+  .navbar-nav
+  .nav-list
+  .nav-list-item
+  .nav-link
+  .link-text {
+  opacity: 1;
+}
+
+/* STUDENT NAVI */
+.main-wrap .main-head .main-nav .navbar .navbar-nav .nav-list .navigation {
+  padding: 10px 10px;
+  list-style: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.main-wrap
+  .main-head
+  .main-nav
+  .navbar
+  .navbar-nav
+  .nav-list
+  .navigation:hover {
+  background: #C5705D;
+}
+.main-wrap
+  .main-head
+  .main-nav
+  .navbar
+  .navbar-nav
+  .nav-list
+  .navigation
+  .navi-link {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #fff;
+  position: relative;
+}
+.main-wrap
+  .main-head
+  .main-nav
+  .navbar
+  .navbar-nav
+  .nav-list
+  .navigation
+  .navi-link
+  i {
+  font-size: 20px;
+}
+.main-wrap
+  .main-head
+  .main-nav
+  .navbar
+  .navbar-nav
+  .nav-list
+  .navigation
+  .navi-link
+  .navi-link-text {
+  position: relative;
+  top: 3px;
+  left: 80px;
+  opacity: 0;
+  height: 29px;
+  transition: 0.2s ease-in-out;
+}
+.main-wrap
+  .main-head.active
+  .main-nav
+  .navbar
+  .navbar-nav
+  .nav-list
+  .navigation
+  .navi-link
+  .navi-link-text {
+  opacity: 1;
+}
+
+.main-wrap .showcase {
+  width: 97%;
+  height: 100vh;
+  background-position: center;
+  /* Linear gradient from top to bottom */
+background-image: linear-gradient(  #fcfbfa, #fdc7c7d7);
+  background-size: cover;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+.main-wrap .showcase .width {
+  width: 80%;
+}
+.main-wrap .showcase .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.main-wrap .showcase .head {
+  padding: 13px 25px;
+}
+.main-wrap .showcase .head .toggler {
+  display: inline-block;
+  background: transparent;
+  border: none;
+  outline: 0;
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.main-wrap .showcase .head .toggler:hover {
+  background: #C5705D;
+}
+.main-wrap .showcase .head .toggler i {
+  font-size: 30px;
+}
+.main-wrap .showcase .content {
+  margin-top: 100px;
+  width: 100%;
+  text-align: center;
+}
+
+.main-wrap .showcase .content .title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-wrap .showcase .content .content-text {
+  width: 640px;
+}
+
+.main-wrap .showcase .content h3 {
+  font-weight: 500;
+  line-height: 100px;
+  font-family: Arial black;
+  color: #f10707;
+  font-size: 100px;
+}
+
+.main-wrap .showcase .content p.file {
+  font-weight: 500;
+  line-height: 75px;
+  color: #180501;
+  font-size: 30px;
+}
+
+.main-wrap .showcase .content .icon {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, #f71747, #830404);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+  box-shadow: 0px 4px 10px #C5705D(0, 0, 0, 0.1);
+}
+
+.icon-button:hover .icon {
+  transform: scale(1.08);
+  box-shadow: 0px 8px 20px #725c57(0, 0, 0, 0.2);
+}
+.link-text {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: inline-block;
+}
+
+.logo {
+  height: 200px;
+  vertical-align: middle;
+  box-sizing: border-box;
+  margin: 20px;
+}
+
+.showcase {
+  position: relative;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 100%;
+  text-align: center;
+}
+
+.top .search-bar {
+  margin-left: 670px;
+  margin-right: 5px;
+  width: 200px;
+  height: 30px;
+  font-size: 15px;
+}
+
+.top .search {
+  color: #fff;
+  background: #C5705D;
+  height: 31px;
+  width: 70px;
+  margin-right: 50px;
+  font-size: medium;
+}
+
+.bisu {
+  height: 50px;
+  border-radius: 50%;
+}
+
+.head .search:hover {
+  background: #C5705D;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.icon-wrapper {
+  text-align: center;
+}
+
+.icon-names-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Ensure the container spans the full width */
+}
+
+.icon-name {
+  width: 150px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 30px;
+  margin-right: 30px;
+  /* Add outline effect */
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+span {
+  color: #080000;
+  margin-right: 15px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+}
+
+.log-out {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 55px;
+  width: auto;
+  padding: 0 10px;
+  background: #C5705D;
+  border: none;
+  cursor: pointer;
+  border-radius: 10%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.log-out span {
+  color: #ffffff;
+  font-size: 15px;
+  margin-right: 10px;
+  margin-left: 2px;
+}
+
+.log-out i {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.head .log-out:hover {
+  background: #ff6f61;
+  transform: scale(1.1);
+}
+
+/* The Modal (background) */
+.model {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #C5705Dba(123, 55, 55, 0.5);
+}
+
+/* Modal Content/Box */
+.model-content {
+  background-color: #ffffff;
+  margin: 15% auto;
+  padding: 40px;
+  border: 2px solid #3f3f42;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Button styles */
+.model-content button {
+  background-color: #f88383;
+  color: white;
+  padding: 10px 60px;
+  margin-left: 2px;
+  border: none;
+  margin-top: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+.model-content button:hover {
+  background-color: #f6b3b3;
+}
+
+footer {
+  margin-left: 110px;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+h1.cs1 {
+  background: #D0B8A8;
+  margin-left: 50px;
+  width: 330px;
+  text-align: left;
+  font-size: 21px;
+  color: #ffffff;
+  border-bottom: 1px solid #ae021f;
+  border-left: 4px solid #ae021f;
+  padding-bottom: 11px;
+  padding: 10px;
+}
+
+form::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+form.addclinicstaff {
+  background: #e3dede;
+  text-align: left;
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #5c5b5b;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+form label {
+  font-weight: BOLD;
+  text-transform: uppercase;
+}
+form input.clinicInput {
+  width: 100%;
+  height: 33px;
+  border: 1px solid #5c5b5b;
+  border-radius: 5px;
+}
+select#personal_id.clinicInput {
+  width: 100%;
+  height: 33px;
+  border: 1px solid #5c5b5b;
+  border-radius: 5px;
+}
+select#staff_id.clinicInput {
+  width: 100%;
+  height: 33px;
+  border: 1px solid #5c5b5b;
+  border-radius: 5px;
+}
+select#medicine.clinicInput {
+  width: 100%;
+  height: 33px;
+  border: 1px solid #5c5b5b;
+  border-radius: 5px;
+}
+div.ClinicStaffContainer {
+  margin-bottom: 15px;
+}
+div.formcontainer {
+  padding-top: 1px;
+}
+button.appBtn {
+  background: #f88383;
+  padding: 10px;
+  border: 1px solid #f88383;
+  color: #fff;
+  margin-top: 20px;
+  float: right;
+}
+p.responseMessage {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 10px;
+  padding: 20px;
+}
+p.responseMesssage_error {
+  background: rgba(149, 4, 4, 0.559);
+}
+p.responseMessage_success {
+  background: rgba(3, 92, 1, 0.599);
+}
+a.back {
+  margin-top: 30px;
+}
+
+/* CLINIC STAFF */
+.create {
+  color: #fff;
+  background: #f88383;
+  height: 41px;
+  width: 150px;
+  margin-top: 40px;
+  margin-left: 600px;
+}
+.back {
+  color: #fff;
+  background: #f88383;
+  height: 41px;
+  width: 150px;
+  margin-left: 600px;
+}
+.back:hover {
+  background: #f88383;
+}
+.create:hover {
+  background: #f88383;
+}
+.clinichead {
+  display: flex;
+}
+h1.cs2 {
+  background: #5f262be3;
+  margin-left: 50px;
+  width: 350px;
+  text-align: left;
+  font-size: 20px;
+  color: #ffffff;
+  border-bottom: 1px solid #7b0404;
+  border-left: 4px solid #7b0404;
+  padding-bottom: 11px;
+  padding: 20px;
+}
+/* Style for clinic list 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000 */
+div.clinicList {
+  margin-top: 5px;
+  padding: 10px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* Style for table */
+div.clinicList table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Style for table header */
+div.clinicList th {
+  background-color: #a6666c;
+  border: 1px solid #5f262be3;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Style for table data */
+div.clinicList td {
+  border: 1px solid #5f262be3;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Alternate row colors */
+div.clinicList tr:nth-child(even) {
+  background-color: #D2B48C;
+}
+
+div.clinicList tr:nth-child(odd) {
+  background-color: #F5F5DC;
+}
+
+div.clinicList tr:hover {
+  background-color: #c7ae98d8;
+}
+
+/* INCIDENT REPORT 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000*/
+form.addIncidentReport {
+  background: #e3dede;
+  text-align: left;
+  width: 65%;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #5c5b5b;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+div.IncidentReport {
+  margin-top: 5px;
+  padding: 10px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+form.addIncidentReport {
+  max-height: 500px; /* Set the maximum height for the scrollable area */
+  overflow-y: auto; /* Add vertical scroll if content exceeds the height */
+  border: 1px solid #ccc; /* Optional: Add border for visual clarity */
+  padding: 10px; /* Optional: Add padding for spacing */
+}
+
+/* Style for table */
+div.IncidentReport table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Style for table header */
+div.IncidentReport th {
+  background-color: #a6666c;
+  border: 1px solid #5f262be3;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* Style for table data */
+div.IncidentReport td {
+  border: 1px solid #5f262be3;
+  padding: 10px;
+  font-size: 10px;
+}
+
+/* Alternate row colors */
+div.IncidentReport tr:nth-child(even) {
+  background-color: #D2B48C;
+}
+
+div.IncidentReport tr:nth-child(odd) {
+  background-color: #F5F5DC;
+}
+
+div.IncidentReport tr:hover {
+  background-color: #c7ae98d8;
+}
+
+/* PERSONAL INFO 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 */
+form.addPersonalInfo {
+  background: #e3dede;
+  text-align: left;
+  width: 65%;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #5c5b5b;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.PersonalInfo {
+  margin-top: 5px;
+  padding: 10px;
+  max-width: 1500px;
+  overflow-x: auto;
+  max-height: 500px;
+  overflow-y: auto;
+}
+form.addPersonalInfo {
+  max-height: 500px; /* Set the maximum height for the scrollable area */
+  overflow-y: auto; /* Add vertical scroll if content exceeds the height */
+  border: 1px solid #ccc; /* Optional: Add border for visual clarity */
+  padding: 10px; /* Optional: Add padding for spacing */
+}
+
+/* Style for table */
+div.PersonalInfo table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Style for table header */
+div.PersonalInfo th {
+  background-color: #a6666c;
+  border: 1px solid #5f262be3;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* Style for table data */
+div.PersonalInfo td {
+  border: 1px solid #5f262be3;
+  padding: 10px;
+  font-size: 10px;
+}
+
+/* Alternate row colors */
+div.PersonalInfo tr:nth-child(even) {
+  background-color: #D2B48C;
+}
+
+div.PersonalInfo tr:nth-child(odd) {
+  background-color: #F5F5DC;
+}
+
+div.PersonalInfo tr:hover {
+  background-color: #c7ae98d8;
+}
+
+/* MEDICINE PRECRIPTION 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 */
+div.MedicineP {
+  margin-top: 5px;
+  padding: 10px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* Style for table */
+div.MedicineP table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Style for table header */
+div.MedicineP th {
+  background-color: #a6666c;
+  border: 1px solid #5f262be3;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* Style for table data */
+div.MedicineP td {
+  border: 1px solid #5f262be3;
+  padding: 10px;
+  font-size: 10px;
+}
+
+/* Alternate row colors */
+div.MedicineP tr:nth-child(even) {
+  background-color: #D2B48C;
+}
+
+div.MedicineP tr:nth-child(odd) {
+  background-color: #F5F5DC;
+}
+
+div.MedicineP tr:hover {
+  background-color: #c7ae98d8;
+}
+/* MEDICINE 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000 */
+div.medicine {
+  margin-top: 5px;
+  padding: 10px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* Style for table */
+div.medicine table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Style for table header */
+div.medicine th {
+  background-color: #a6666c;
+  border: 1px solid #5f262be3;
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+}
+
+/* Style for table data */
+div.medicine td {
+  border: 1px solid #5f262be3;
+  padding: 10px;
+  font-size: 13px;
+}
+
+/* Alternate row colors */
+div.medicine tr:nth-child(even) {
+  background-color: #D2B48C;
+}
+
+div.medicine tr:nth-child(odd) {
+  background-color: #F5F5DC;
+}
+
+div.medicine tr:hover {
+  background-color: #c7ae98d8;
+}
+/* MONTH 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000 */
+div.MONTLY {
+  margin-top: 5px;
+  padding: 50px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* Style for table */
+div.MONTLY table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Style for table header */
+div.MONTLY th {
+  background-color: #a6666c;
+  border: 1px solid #5f262be3;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Style for table data */
+div.MONTLY td {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border: 1px solid #5f262be3;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Alternate row colors */
+div.MONTLY tr:nth-child(even) {
+  background-color: #D2B48C;
+}
+
+div.MONTLY tr:nth-child(odd) {
+  background-color: #F5F5DC;
+}
+
+div.MONTLY tr:hover {
+  background-color: #c7ae98d8;
+}
+/* MEDICINE PRECRIPTION 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 */
+div.MedicineP {
+  margin-top: 5px;
+  padding: 10px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* Style for table */
+div.MedicineP table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Style for table header */
+div.MedicineP th {
+  background-color: #a6666c;
+  border: 1px solid #5f262be3;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* Style for table data */
+div.MedicineP td {
+  border: 1px solid #5f262be3;
+  padding: 10px;
+  font-size: 10px;
+}
+
+/* Alternate row colors */
+div.MedicineP tr:nth-child(even) {
+  background-color: #D2B48C;
+}
+
+div.MedicineP tr:nth-child(odd) {
+  background-color: #F5F5DC;
+}
+
+div.MedicineP tr:hover {
+  background-color: #c7ae98d8;
+}
+/* Assist 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000 */
+div.Assist {
+  margin-top: 5px;
+  padding: 13px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* Style for table */
+div.Assist table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Style for table header */
+div.Assist th {
+  background-color: #a6666c;
+  border: 1px solid #5f262be3;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Style for table data */
+div.Assist td {
+  border: 1px solid #5f262be3;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Alternate row colors */
+div.Assist tr:nth-child(even) {
+  background-color: #D2B48C;
+}
+
+div.Assist tr:nth-child(odd) {
+  background-color: #F5F5DC;
+}
+
+div.Assist tr:hover {
+  background-color: #c7ae98d8;
+}
+/* Search 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000 */
+div.searchTable {
+  margin-top: 5px;
+  padding: 13px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* Style for table */
+div.searchTable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Style for table header */
+div.searchTable th {
+  background-color: #a6666c;
+  border: 1px solid #5f262be3;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Style for table data */
+div.searchTable td {
+  border: 1px solid #5f262be3;
+  padding: 10px;
+  font-size: 13px;
+}
+
+/* Alternate row colors */
+div.searchTable tr:nth-child(even) {
+  background-color: #D2B48C;
+}
+
+div.searchTable tr:nth-child(odd) {
+  background-color: #F5F5DC;
+}
+
+div.searchTable tr:hover {
+  background-color: #c7ae98d8;
+}
