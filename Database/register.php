@@ -10,6 +10,8 @@ if ($_POST) {
     $lastName = $_POST['lastName'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    // Hash the password 
+    $hash = password_hash($password, PASSWORD_BCRYPT);
 
     // Check if the email already exists in the database
     $query = 'SELECT * FROM users WHERE email = :email';
@@ -25,7 +27,7 @@ if ($_POST) {
         $insertStmt = $conn->prepare($insertQuery);
         $insertStmt->bindParam(':firstName', $firstName);
         $insertStmt->bindParam(':lastName', $lastName);
-        $insertStmt->bindParam(':password', $password);
+        $insertStmt->bindParam(':password', $hash);
         $insertStmt->bindParam(':email', $email);
 
         if ($insertStmt->execute()) {
