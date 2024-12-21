@@ -1,30 +1,38 @@
 <?php
-
-//Start the session
+// Start the session
 session_start();
 
 $error_message = '';
 
-    if($_POST){
-        include('database/connection.php');
+if ($_POST) {
+    include('database/connection.php');
 
-        $email =$_POST['email'];
-        $password =$_POST['password'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-        $query = 'SELECT * From users WHERE users.email="'. $email .'" AND users.password="'. $password . '"';
-        $stmt = $conn->prepare($query);
-        $stmt->execute();
+    // Prepare and execute the query to fetch user data based on email
+    $query = 'SELECT * FROM users WHERE email = :email';
+    $stmt = $conn->prepare($query);
+    $stmt->bindParam(':email', $email);
+    $stmt->execute();
 
-        if($stmt->rowCount() > 0){
-            $stmt->setFetchMode(PDO::FETCH_ASSOC);
-            $user = $stmt->fetchAll()[0];
+    if ($stmt->rowCount() > 0) {
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        // Verify the password
+        if (password_verify($password, $user['password'])) {
+            // Password is correct
             $_SESSION['user'] = $user;
-            var_dump($_SESSION['user']);
-            
             header('Location: html/home.php');
-
-        } else $error_message = 'Password is Incorrect';
+        } else {
+            // Incorrect password
+            $error_message = 'Password is Incorrect';
+        }
+    } else {
+        // User not found
+        $error_message = 'Email not found';
     }
+}
 ?>
 
 <!DOCTYPE html>
